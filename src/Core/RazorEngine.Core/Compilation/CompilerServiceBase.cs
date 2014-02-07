@@ -197,7 +197,7 @@
             var engine = new RazorTemplateEngine(host);
             GeneratorResults result;
             using (var reader = new StringReader(template))
-                result = engine.GenerateCode(reader);
+                result = engine.GenerateCode(reader, host.DefaultClassName, host.DefaultNamespace, "razorengine");
 
             return result;
         }
